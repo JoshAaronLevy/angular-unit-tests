@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
@@ -16,6 +16,9 @@ import { PrimeNGBundleModule } from './modules/primeng.module';
     RouterModule.forRoot(AppRoutes, { onSameUrlNavigation: 'reload' }),
     AppRoutingModule,
     PrimeNGBundleModule
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [],
   bootstrap: [
